@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./Images/favicon.ico" type="image/x-icon">
+    <!-- boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+    <div class="container">
+        <h1>Register</h1>
+        <form id="registerationForm" novalidate>
+            <div class="form-group">
+                <label for="fullname">Fullname *</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your fullname" required>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group password-field">
+                <label for="password">Password *</label>
+                <div class="input-wrapper">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required> 
+                    <i class="fa-solid fa-eye" data-target="password"></i>
+                </div>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group password-field">
+                <label for="confirmPassword">Confirm Password *</label>
+                <div class="input-wrapper">
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Enter your password" required>
+                    <i class="fa-solid fa-eye" data-target="confirmPassword"></i>
+                </div>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number (Optional) </label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-group checkbox">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">
+                    I agree to the <a href="#">Terms and Conditions</a>
+                </label>
+                <small class="error-message"></small>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="snackbar" id="snackbar"></div>
+    </div>
+
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
